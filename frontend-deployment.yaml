@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-redis
-        image: gcr.io/google-samples/gb-frontend:v4
+        image: 174863393238.dkr.ecr.us-west-2.amazonaws.com/ci-cd-demo:frontend-latest
         resources:
           requests:
             cpu: 100m
@@ -32,6 +32,6 @@ spec:
         ports:
           - containerPort: 8080
       - name: nginx
-        image: tiao/gb-frontend-nginx
+        image: 174863393238.dkr.ecr.us-west-2.amazonaws.com/ci-cd-demo:nginx-latest
         ports:
           - containerPort: 80
