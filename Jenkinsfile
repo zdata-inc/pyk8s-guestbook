@@ -29,7 +29,7 @@ pipeline {
       steps{
         script {
           sh "echo Testing"
-          sh "echo 'Testing successfull;"
+          sh "echo 'Testing successfull'"
         }
       }
     }
