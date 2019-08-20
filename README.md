@@ -11,7 +11,7 @@ All yaml files have been updated to use Flask in place of PHP. This should boot 
 
 Each piece does have its own container and image to maintain.
   
-#To Do
+# To Do
 - Add Test cases to ensure each container works (This can be simple curl tests to ensure responses)
 - image names in the yaml files still need to be changed for EKS
 - explore Helm if that will be easier for deployment
