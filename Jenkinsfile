@@ -9,7 +9,7 @@ pipeline {
     stage('build') {
       steps{
         script {
-          sh "docker build -t 174863393238.dkr.ecr.us-west-2.amazonaws.com/ci-cd-demo:nginx-latest ./flask-redis"
+          sh "docker build -t 174863393238.dkr.ecr.us-west-2.amazonaws.com/ci-cd-demo:frontend-latest ./flask-redis"
           sh "docker build -t 174863393238.dkr.ecr.us-west-2.amazonaws.com/ci-cd-demo:nginx-latest ./nginx"
          }
       }
@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry([ credentialsId: "ECR", url: "https://174863393238.dkr.ecr.us-west-2.amazonaws.com" ]) {
-                     sh "docker push 174863393238.dkr.ecr.us-west-2.amazonaws.com/ci-cd-demo:nginx-latest"
+                     sh "docker push 174863393238.dkr.ecr.us-west-2.amazonaws.com/ci-cd-demo:frontend-latest"
                      sh "docker push 174863393238.dkr.ecr.us-west-2.amazonaws.com/ci-cd-demo:nginx-latest"
                     }
                 }
